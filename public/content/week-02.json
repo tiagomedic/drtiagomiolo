@@ -1,0 +1,53 @@
+{
+  "week": 2,
+  "pilar": "VISIONÁRIO",
+  "date_send": "2026-04-14",
+  "brief_summary": "IA no diagnóstico médico: o que está chegando e o que os médicos ainda não perceberam",
+  "status": "planned",
+  "newsletter": {
+    "subject": "A IA já diagnostica melhor que médicos em 3 especialidades. E agora?",
+    "preview_text": "O que muda quando o modelo acerta mais que o especialista",
+    "body": "Em dezembro, um estudo publicado no NEJM mostrou que um modelo de IA diagnosticou câncer de mama em mamografias com 11% menos falsos negativos que radiologistas experientes.\n\nNão foi uma surpresa para quem acompanha a área. Foi uma confirmação.\n\nJá temos modelos que superam médicos em:\n— Detecção de retinopatia diabética (Google Health, 2019)\n— Diagnóstico de câncer de pele (Stanford, 2017)\n— Leitura de ECG para fibrilação atrial (Apple/Stanford, 2019)\n\nA pergunta que os médicos fazem é errada. Não é \"a IA vai substituir médicos?\". É \"o que acontece com os médicos que não usam IA, quando os que usam ficarem muito melhores?\"\n\nIsso está chegando no Brasil. Mais rápido do que a regulamentação do CFM consegue acompanhar.\n\nNo Prevvine e StaiDoc, estamos navegando exatamente nessa tensão: ferramentas de IA que ajudam o médico, não o substituem. Pelo menos por enquanto.\n\nA janela para construir nesse espaço é agora. Daqui a 3 anos, os grandes players internacionais vão dominar as APIs.",
+    "word_count": 412,
+    "editorial_score": 87,
+    "versions": []
+  },
+  "linkedin": {
+    "hook": "A IA já é melhor que médicos em 3 especialidades. O que isso significa?",
+    "body": "Não é ficção científica. É 2026.\n\nModelos de IA já superam médicos experientes em:\n— Detecção de retinopatia diabética\n— Diagnóstico de câncer de pele\n— Leitura de ECG para FA\n\nA pergunta certa não é \"vai substituir médicos?\".\n\nÉ: o que acontece com quem não usar quando os que usam ficarem muito melhores?\n\nIsso está chegando no Brasil. A janela para construir é agora.\n\n→ Desenvolvo esse tema na newsletter desta semana.",
+    "has_image": true,
+    "image_type": "stats_card",
+    "image_text": "IA vs Médico: 11% menos falsos negativos em mamografia",
+    "versions": []
+  },
+  "instagram": {
+    "caption": "A IA já diagnostica melhor que médicos em algumas áreas. Não é hype — é publicado no NEJM. O que muda para médicos, pacientes e gestores de saúde? Slides →\n\n#ia #inteligenciaartificial #medicina #healthtech #saúde #futuro #inovacao",
+    "slides": [
+      { "order": 1, "type": "hook", "text": "A IA já diagnostica melhor que médicos.\n\nEm algumas áreas." },
+      { "order": 2, "type": "content", "text": "11% menos falsos negativos em mamografia.\n\nPublicado no NEJM." },
+      { "order": 3, "type": "content", "text": "Retinopatia, melanoma, fibrilação atrial.\n\nModelos superam especialistas." },
+      { "order": 4, "type": "content", "text": "A pergunta errada:\n\"A IA substitui médicos?\"\n\nA certa:\n\"O que acontece com quem não usar?\"" },
+      { "order": 5, "type": "cta", "text": "A janela para construir é agora.\n\nLeia a análise completa na newsletter.\ntiagomiolo.com" }
+    ],
+    "versions": []
+  },
+  "twitter": {
+    "thread": [
+      "A IA já diagnostica melhor que médicos em 3 especialidades.\n\nIsso está acontecendo. Agora. Thread 🧵",
+      "NEJM, dezembro: modelo de IA detectou câncer de mama com 11% menos falsos negativos que radiologistas experientes.\n\nNão foi surpresa. Foi confirmação.",
+      "Já temos evidências em: retinopatia diabética, melanoma, ECG para fibrilação atrial.\n\nTodos com publicações em journals top.",
+      "A pergunta errada que os médicos fazem: \"A IA vai me substituir?\"\n\nA certa: \"o que acontece com médicos que não usarem quando os que usarem ficarem muito melhores?\"",
+      "No Brasil, a janela para construir ferramentas nesse espaço é agora.\n\nDaqui a 3 anos, os grandes players internacionais dominam as APIs."
+    ],
+    "has_image": false,
+    "image_type": null,
+    "versions": []
+  },
+  "metrics": {
+    "beehiiv_subscribers": null,
+    "beehiiv_open_rate": null,
+    "linkedin_impressions": null,
+    "instagram_reach": null,
+    "twitter_impressions": null
+  }
+}

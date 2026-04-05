@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 1080px;
+    height: 1080px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--bg-start, #1e1b4b), var(--bg-end, #312e81));
+    overflow: hidden;
+  }
+  .slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+    position: relative;
+  }
+  .accent-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .text {
+    font-family: 'Inter', sans-serif;
+    font-size: 52px;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    line-height: 1.25;
+    white-space: pre-line;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+  .handle {
+    position: absolute;
+    bottom: 40px;
+    right: 48px;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.02em;
+  }
+  .number {
+    position: absolute;
+    top: 40px;
+    left: 48px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.05em;
+  }
+  .logo-mark {
+    position: absolute;
+    bottom: 36px;
+    left: 48px;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    color: white;
+    letter-spacing: -0.03em;
+  }
+</style>
+</head>
+<body>
+  <div class="slide">
+    <div class="accent-bar"></div>
+    <div class="number" id="slide-number">1/5</div>
+    <div class="text" id="slide-text">O hospital estava saudável no papel.
+
+Não estava.</div>
+    <div class="logo-mark">TM</div>
+    <div class="handle">@tiagomiolo</div>
+  </div>
+</body>
+</html>
