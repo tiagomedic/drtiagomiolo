@@ -1,59 +1,38 @@
 {
   "week": 1,
-  "pilar": "CONSTRUTOR",
+  "pilar": "LÍDER",
   "date_send": "2026-04-07",
-  "brief_summary": "Descobri R$80k/mês em glosas no HMC por gap entre time clínico e faturamento",
-  "status": "ready",
+  "status": "aguardando_brief_tiago",
+  "brief_summary": "Primeiro pilar — LÍDER com filosofia prática. Tiago precisa fornecer uma história real de liderança sob pressão + qual pensamento/leitura filosófica ajudou a decidir.",
+  "brief_instructions": "Para gerar o conteúdo desta semana, Tiago deve responder:\n1. Qual situação real de liderança aconteceu recentemente (ou marcou você)?\n2. O que você sentiu no momento (antes de refletir)?\n3. Qual pensamento filosófico (livro, frase, autor) ajudou?\n4. Qual decisão tomou — e o resultado?",
   "newsletter": {
-    "subject": "O erro que custa R$80k/mês nos hospitais (e ninguém mapeia)",
-    "preview_text": "Como descobri um buraco de R$80k/mês que ninguém havia visto",
-    "body": "Em agosto, o HMC tinha 71% de ocupação. Taxa boa para qualquer hospital.\n\nMas o fluxo de caixa não fechava.\n\nMandei levantar linha por linha o custo operacional. Levou 3 dias. O que encontramos: R$80k por mês em procedimentos negados pelos planos depois da internação — problemas de codificação que ninguém havia mapeado.\n\nO hospital estava tratando pacientes e não recebendo por isso. Há meses.\n\nA raiz do problema não era médica. Era um gap entre o time clínico e o time de faturamento. Dois mundos que raramente se falavam.\n\nO que mudamos: uma reunião semanal de 30 minutos entre os dois times. Não para resolver tudo — para identificar os casos em risco antes que o plano negue.\n\nTrês meses depois, o índice de glosas caiu 40%.\n\nÀs vezes o problema não está onde você olha primeiro.\n\n---\n\nNo StaiDoc, estamos construindo justamente essa ponte — entre o que acontece na assistência e o que precisa ser documentado para o faturamento. A primeira clínica usando em produção teve 23% de redução em documentação retroativa. É pequeno. Mas é real.\n\n---\n\nSe você gerencia um hospital ou clínica e quer conversar sobre esse problema, responda esse email. Leio todos.",
-    "word_count": 487,
-    "editorial_score": 91,
-    "versions": [
-      {
-        "v": 1,
-        "body": "Versão original do Nelson...",
-        "feedback": null,
-        "timestamp": "2026-04-06T10:00:00Z"
-      }
-    ]
+    "subject_lines": [],
+    "chosen_subject": "",
+    "body": "",
+    "send_link": "",
+    "status": "aguardando_brief"
   },
   "linkedin": {
-    "hook": "O hospital sangrava. No papel, tudo ok.",
-    "body": "O HMC tinha 71% de ocupação em agosto. Boa taxa. Mas o caixa não fechava.\n\nTrês dias levantando linha por linha. Resultado: R$80k/mês em glosas que ninguém havia mapeado.\n\nO problema não era médico — era um gap entre o time clínico e faturamento. Dois mundos que raramente se falavam.\n\nO que mudamos: reunião de 30 min/semana entre os dois times.\n\nTrês meses depois: glosas caíram 40%.\n\nÀs vezes a solução mais simples é a que ninguém tentou ainda.\n\n→ Conto mais sobre isso na newsletter de hoje. Link na bio.",
-    "has_image": true,
-    "image_type": "quote_card",
-    "image_text": "O hospital estava saudável no papel. Não estava.",
-    "versions": []
+    "hook": "",
+    "body": "",
+    "cta": "",
+    "comment_with_link": "",
+    "status": "aguardando_newsletter",
+    "visual_template": "LÍDER-02"
   },
   "instagram": {
-    "caption": "O hospital estava saudável no papel. Não estava. 🔍\n\n71% de ocupação, mas o caixa sangrava R$80k por mês. O problema estava escondido entre dois times que não se falavam.\n\nVeja como identificamos e resolvemos → slides →\n\n#gestãohospitalar #healthtech #medicina #saúde #cirurgiaplástica #CEO #empreendedorismo",
-    "slides": [
-      { "order": 1, "type": "hook", "text": "O hospital estava saudável no papel.\n\nNão estava." },
-      { "order": 2, "type": "content", "text": "71% de ocupação em agosto.\n\nParecia ótimo. O caixa não fechava." },
-      { "order": 3, "type": "content", "text": "R$80k/mês em glosas.\n\nNinguém havia mapeado." },
-      { "order": 4, "type": "content", "text": "Solução: 30 minutos por semana.\n\nTime clínico + faturamento na mesma sala." },
-      { "order": 5, "type": "cta", "text": "Resultado: -40% em glosas.\n\nLeia a história completa na newsletter.\ntiagomiolo.com" }
-    ],
-    "versions": []
+    "slides": [],
+    "status": "aguardando_newsletter"
   },
   "twitter": {
-    "thread": [
-      "Hospital com 71% de ocupação e caixa negativo. Parece impossível. Não é.\n\nThread sobre o erro que ninguém mapeia 🧵",
-      "O problema: o time clínico documenta de um jeito. O faturamento precisa de outro.\n\nNo meio, R$80k/mês vira glosa.",
-      "Descoberta após 3 dias levantando linha por linha do custo operacional.\n\nNão estava no lugar óbvio.",
-      "Solução: uma reunião de 30 minutos por semana entre os dois times.\n\nSimples. Não foi fácil de implementar.",
-      "Três meses depois: glosas caíram 40%.\n\nÀs vezes o problema mais caro tem a solução mais simples."
-    ],
-    "has_image": false,
-    "image_type": null,
-    "versions": []
+    "thread": [],
+    "status": "aguardando_newsletter"
   },
   "metrics": {
-    "beehiiv_subscribers": null,
-    "beehiiv_open_rate": null,
+    "newsletter_opens": null,
+    "newsletter_clicks": null,
     "linkedin_impressions": null,
+    "linkedin_comments": null,
     "instagram_reach": null,
     "twitter_impressions": null
   }

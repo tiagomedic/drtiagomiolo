@@ -1,4 +1,4 @@
-export type Pilar = 'CONSTRUTOR' | 'VISIONÁRIO' | 'GESTOR' | 'CIRURGIÃO'
+export type Pilar = 'LÍDER' | 'CONSTRUTOR' | 'VISIONÁRIO' | 'CIRURGIÃO'
 
 export interface ContentVersion {
   v: number

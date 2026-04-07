@@ -1,43 +1,43 @@
 import { CalendarWeek, Pilar } from './types'
 
-const PILAR_ROTATION: Pilar[] = ['CONSTRUTOR', 'VISIONÁRIO', 'GESTOR', 'CIRURGIÃO']
+const PILAR_ROTATION: Pilar[] = ['LÍDER', 'CONSTRUTOR', 'VISIONÁRIO', 'CIRURGIÃO']
 
 const THEME_SUGGESTIONS: Record<Pilar, string[]> = {
+  LÍDER: [
+    'Decisão difícil com filosofia',
+    'Liderança sob pressão extrema',
+    'Marcus Aurelius na sala de reuniões',
+    'O que aprendi errando como líder',
+    'Liderar médicos vs. engenheiros',
+    'Conflito que você evitou (e não devia)',
+    'Estoicismo e a gestão hospitalar',
+  ],
   CONSTRUTOR: [
-    'Bastidores de produto',
-    'Erro e aprendizado',
-    'Decisão difícil',
-    'Conquista real',
-    'Contratação/demissão',
-    'Feature lançada',
-    'Parceria/negociação',
+    'Bastidores de produto StaiDoc',
+    'Erro e aprendizado na Prevvine',
+    'Decisão difícil na clínica SP',
+    'Feature que quase não lançamos',
+    'Contratação/demissão difícil',
+    'O que ninguém conta sobre ser médico-fundador',
+    'Parceria/negociação real',
   ],
   VISIONÁRIO: [
-    'IA no diagnóstico',
-    'Regulamentação ANVISA',
-    'Tendência internacional',
-    'O que médicos ainda não viram',
-    'Healthtech no Brasil',
-    'IA na gestão clínica',
-    'Futuro da medicina',
-  ],
-  GESTOR: [
-    'Eficiência operacional',
-    'Liderança sob pressão',
-    'Dado que surpreendeu',
-    'Processo que mudou',
-    'Conflito e decisão',
-    'Glosa e faturamento',
-    'Time e cultura',
+    'IA que construí errou — o que aprendi',
+    'O que médicos ainda não viram sobre IA',
+    'Pergunta errada vs. pergunta certa sobre IA',
+    'Regulamentação ANVISA SaMD',
+    'Healthtech no Brasil: o que falta',
+    'IA copiloto vs. IA substituindo',
+    'Futuro da medicina preventiva',
   ],
   CIRURGIÃO: [
-    'Sala de operações e negócios',
-    'O que a cirurgia ensina',
-    'Humanidade do paciente',
-    'Precisão como filosofia',
-    'Decisão sem volta',
-    'Preparação e execução',
-    'O silêncio antes de operar',
+    'O que a sala de operações ensina',
+    'Minha cirurgia mais difícil',
+    'Humanidade: o paciente que mudou perspectiva',
+    'Precisão como filosofia de vida',
+    'Decisão sem volta — sala e negócios',
+    'Preparação e execução: cirurgia e startups',
+    'O que 2.000 cirurgias ensinam sobre excelência',
   ],
 }
 
@@ -73,40 +73,40 @@ export function generateCalendar(): CalendarWeek[] {
 
 export function getPilarColor(pilar: Pilar): string {
   const colors: Record<Pilar, string> = {
-    CONSTRUTOR: '#6366f1',
-    VISIONÁRIO: '#0ea5e9',
-    GESTOR: '#10b981',
-    CIRURGIÃO: '#f59e0b',
+    LÍDER:      '#8b5cf6', // violeta — liderança filosófica
+    CONSTRUTOR: '#6366f1', // índigo — construção
+    VISIONÁRIO: '#0ea5e9', // azul — visão de futuro
+    CIRURGIÃO:  '#f59e0b', // âmbar — precisão cirúrgica
   }
   return colors[pilar]
 }
 
 export function getPilarGradient(pilar: Pilar): string {
   const gradients: Record<Pilar, string> = {
+    LÍDER:      'linear-gradient(135deg, #2e1065, #4c1d95)',
     CONSTRUTOR: 'linear-gradient(135deg, #1e1b4b, #312e81)',
     VISIONÁRIO: 'linear-gradient(135deg, #0c4a6e, #075985)',
-    GESTOR: 'linear-gradient(135deg, #14532d, #166534)',
-    CIRURGIÃO: 'linear-gradient(135deg, #78350f, #92400e)',
+    CIRURGIÃO:  'linear-gradient(135deg, #78350f, #92400e)',
   }
   return gradients[pilar]
 }
 
 export function getPilarBg(pilar: Pilar): string {
   const bgs: Record<Pilar, string> = {
+    LÍDER:      'bg-violet-900/30 border-violet-500/30',
     CONSTRUTOR: 'bg-indigo-900/30 border-indigo-500/30',
     VISIONÁRIO: 'bg-sky-900/30 border-sky-500/30',
-    GESTOR: 'bg-emerald-900/30 border-emerald-500/30',
-    CIRURGIÃO: 'bg-amber-900/30 border-amber-500/30',
+    CIRURGIÃO:  'bg-amber-900/30 border-amber-500/30',
   }
   return bgs[pilar]
 }
 
 export function getPilarTextColor(pilar: Pilar): string {
   const colors: Record<Pilar, string> = {
+    LÍDER:      'text-violet-400',
     CONSTRUTOR: 'text-indigo-400',
     VISIONÁRIO: 'text-sky-400',
-    GESTOR: 'text-emerald-400',
-    CIRURGIÃO: 'text-amber-400',
+    CIRURGIÃO:  'text-amber-400',
   }
   return colors[pilar]
 }

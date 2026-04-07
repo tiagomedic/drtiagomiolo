@@ -62,10 +62,10 @@ function MetricCard({
 
 export default function MetricsBar({ week, publishedCount, nextPilar }: MetricsBarProps) {
   const NEXT_PILAR_COLORS: Record<string, { color: string; bg: string }> = {
-    CONSTRUTOR: { color: '#6366f1', bg: '#6366f120' },
+    'LÍDER':      { color: '#8b5cf6', bg: '#8b5cf620' },
+    CONSTRUTOR:   { color: '#6366f1', bg: '#6366f120' },
     'VISIONÁRIO': { color: '#0ea5e9', bg: '#0ea5e920' },
-    GESTOR: { color: '#10b981', bg: '#10b98120' },
-    'CIRURGIÃO': { color: '#f59e0b', bg: '#f59e0b20' },
+    'CIRURGIÃO':  { color: '#f59e0b', bg: '#f59e0b20' },
   }
 
   const nextColors = NEXT_PILAR_COLORS[nextPilar] || NEXT_PILAR_COLORS.CONSTRUTOR

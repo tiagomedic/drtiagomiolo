@@ -7,9 +7,9 @@ interface TopBarProps {
 }
 
 const PILAR_ICONS: Record<string, string> = {
-  CONSTRUTOR: 'C',
+  'LÍDER':     'L',
+  CONSTRUTOR:  'C',
   'VISIONÁRIO': 'V',
-  GESTOR: 'G',
   'CIRURGIÃO': 'S',
 }
 

@@ -78,7 +78,7 @@ export default function CalendarPage() {
           </div>
 
           {/* Pilar breakdown */}
-          {(['CONSTRUTOR', 'VISIONÁRIO', 'GESTOR', 'CIRURGIÃO'] as const).map(pilar => (
+          {(['LÍDER', 'CONSTRUTOR', 'VISIONÁRIO', 'CIRURGIÃO'] as const).map(pilar => (
             <div
               key={pilar}
               className="bg-[#18181f] border border-[#2d2d3a] rounded-xl px-4 py-3"
