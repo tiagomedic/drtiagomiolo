@@ -1,31 +1,24 @@
 {
   "week": 1,
   "pilar": "LÍDER",
-  "date_send": "2026-04-07",
+  "date_send": "2026-04-14",
   "brief_summary": "Descentralização do poder enfraquece a autoridade. Quem chegou aonde chegou, chegou por competência — e na hora da responsabilidade, está sozinho. Phronesis (Aristóteles): sabedoria prática não vem de título, vem de consequências vividas.",
   "status": "ready",
   "newsletter": {
-    "subject_lines": [
-      "Democratizar a decisão é o erro mais moderno que um líder pode cometer",
-      "Você distribui a decisão. A responsabilidade fica com você.",
-      "Por que líderes competentes perdem autoridade — e o que o cabelo branco explica"
-    ],
-    "chosen_subject": "Você distribui a decisão. A responsabilidade fica com você.",
+    "subject": "Você distribui a decisão. A responsabilidade fica com você.",
+    "preview_text": "Por que o modelo democrático de decisão falha quando mais importa.",
     "body": "Nunca vi uma empresa ruir por excesso de autoridade.\n\nSó por falta dela.\n\nVejo esse padrão em todo lugar. Hospitais que dirijo. Startups que construo. Fazendas, agronegócio, pequenas empresas de família.\n\nO líder chegou aonde chegou por alguma razão. Estudou, errou, acumulou cicatrizes que não aparecem em currículo. Tem responsabilidade na pele.\n\nE então, por modéstia ou pressão cultural, começa a distribuir o poder de decisão para quem ainda está no começo da curva.\n\nNão porque sejam mais competentes. Porque parece colaborativo. Moderno. Democrático.\n\nO problema é simples.\n\nQuando algo dá errado — e em algum momento sempre dá — quem responde?\n\nO líder. Sempre o líder.\n\nVocê distribui a decisão. Não distribui a responsabilidade.\n\n---\n\nProfissionais-chave devem ser consultados. Especialistas têm valor insubstituível em suas áreas.\n\nMas parecer técnico é diferente de decisão de comando.\n\nConfundir os dois é o que enfraquece autoridades legítimas no momento que a organização mais precisa delas.\n\nNa medicina aprendi isso cedo.\n\n\"Dou mais valor ao cabelo branco do que a qualquer título pendurado na parede.\"\n\nNão é arrogância. É o reconhecimento de que certas coisas só chegam com tempo, erros reais e consequências acumuladas.\n\nAristóteles chamava de phronesis — sabedoria prática. Diferente de conhecimento teórico. É o que vem de ter vivido as próprias decisões.\n\nA nova geração tem pessoas excepcionais. Tem também quem ainda não acumulou o que precisa para carregar uma decisão de alto impacto.\n\nSaber a diferença — e ter clareza de agir de acordo com isso — é o que separa liderança real de ilusão de liderança.\n\n---\n\nNa StaiDoc, enfrento isso toda semana.\n\nTenho engenheiros brilhantes. Tenho médicos consultores com currículos sólidos.\n\nAprendi que ouvir todos não é o mesmo que decidir com todos.\n\nO que o produto faz, o que um médico vai confiar para tomar uma conduta, é minha responsabilidade. Não da maioria.\n\n---\n\nVocê já delegou uma decisão importante para quem não tinha a experiência para carregá-la?\n\nMe conta nos comentários o que aconteceu.",
     "word_count": 387,
-    "visual_template": "LÍDER-01",
-    "visual_note": "Diagrama 'Dois Caminhos': Caminho A = distribuir decisão (parece moderno → você ainda responde). Caminho B = consultar e decidir (phronesis → autoridade mantida).",
-    "status": "ready"
+    "editorial_score": 88,
+    "versions": []
   },
   "linkedin": {
     "hook": "Nunca vi empresa ruir por excesso de autoridade. Só por falta dela.",
     "body": "Nunca vi empresa ruir por excesso de autoridade. Só por falta dela.\n\nVejo esse padrão em hospitais, startups, fazendas, pequenas empresas.\n\nO líder chegou aonde chegou por alguma razão. Estudou, errou, acumulou cicatrizes.\n\nE então começa a distribuir poder de decisão para quem ainda está no começo da curva.\n\nNão porque sejam mais competentes. Porque parece colaborativo. Moderno.\n\nO problema: quando algo dá errado, quem responde?\n\nO líder. Sempre.\n\nVocê distribui a decisão. A responsabilidade fica com você.\n\nProfissionais-chave devem ser consultados. Especialistas têm valor real.\n\nMas parecer técnico é diferente de decisão de comando.\n\nNa medicina aprendo isso todo dia.\n\n\"Dou mais valor ao cabelo branco do que a qualquer título pendurado na parede.\"\n\nAristóteles chamava de phronesis — sabedoria prática. Vem de erros reais e consequências acumuladas. Certificado nenhum substitui isso.\n\nA nova geração tem pessoas excepcionais. Tem também quem não acumulou ainda o que precisa para carregar uma decisão de alto impacto.\n\nSaber a diferença é o que separa liderança real de ilusão de liderança.\n\nVocê já delegou uma decisão importante para quem não tinha a experiência para carregá-la? O que aconteceu?",
-    "cta": "Você já delegou uma decisão importante para quem não tinha a experiência para carregá-la? O que aconteceu?",
-    "comment_with_link": "Newsletter completa desta semana — com a conexão ao Aristóteles e como aplico isso no StaiDoc: [link Beehiiv]",
-    "word_count": 212,
-    "hook_char_count": 70,
-    "visual_template": "LÍDER-01",
-    "status": "ready"
+    "has_image": false,
+    "image_type": null,
+    "image_text": null,
+    "versions": []
   },
   "twitter": {
     "thread": [
@@ -35,9 +28,12 @@
       "Aristóteles chamava de phronesis — sabedoria prática.\n\nDiferente de certificação, de título, de diploma.\n\nVem de ter vivido as consequências das próprias decisões.\n\nNa medicina: \"dou mais valor ao cabelo branco do que a qualquer título pendurado na parede.\"",
       "Profissionais-chave devem ser consultados. Especialistas têm valor real.\n\nMas parecer técnico é diferente de decisão de comando.\n\nConfundir os dois enfraquece autoridades legítimas no momento que a organização mais precisa delas."
     ],
-    "status": "ready"
+    "has_image": false,
+    "image_type": null,
+    "versions": []
   },
   "instagram": {
+    "caption": "Nunca vi empresa ruir por excesso de autoridade. Só por falta dela.\n\nVocê distribui a decisão. A responsabilidade fica com você.\n\nAristóteles chamava de phronesis — sabedoria prática. Não vem de título. Vem de ter vivido as consequências das próprias decisões.\n\nQual foi a decisão mais difícil que você precisou tomar sozinho? 👇\n\n#liderança #gestão #medicina #empreendedorismo #filosofia #stoicismo #staidos #prevvine",
     "slides": [
       {
         "order": 1,
@@ -70,13 +66,12 @@
         "text": "Profissionais-chave: consulte sempre.\n\nMas decisão de comando é sua.\n\nQual foi a decisão mais difícil que você precisou tomar sozinho?"
       }
     ],
-    "status": "ready"
+    "versions": []
   },
   "metrics": {
-    "newsletter_opens": null,
-    "newsletter_clicks": null,
+    "beehiiv_subscribers": null,
+    "beehiiv_open_rate": null,
     "linkedin_impressions": null,
-    "linkedin_comments": null,
     "instagram_reach": null,
     "twitter_impressions": null
   }

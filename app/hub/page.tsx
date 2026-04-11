@@ -5,6 +5,7 @@ import TopBar from '@/components/TopBar'
 import MetricsBar from '@/components/MetricsBar'
 import PlatformCard from '@/components/PlatformCard'
 import CarouselPreview from '@/components/CarouselPreview'
+import XCard from '@/components/XCard'
 import { redirect } from 'next/navigation'
 
 function NewsletterBody({ content }: { content: WeekContent['newsletter'] }) {
@@ -111,32 +112,6 @@ function InstagramBody({ content }: { content: WeekContent['instagram'] }) {
   )
 }
 
-function TwitterBody({ content }: { content: WeekContent['twitter'] }) {
-  return (
-    <div className="space-y-2">
-      <p className="text-xs text-[#64748b] font-medium mb-2">Thread ({content.thread.length} tweets)</p>
-      {content.thread.map((tweet, i) => (
-        <div key={i} className="relative">
-          {/* Thread connector line */}
-          {i < content.thread.length - 1 && (
-            <div className="absolute left-4 top-8 bottom-0 w-px bg-[#2d2d3a]" />
-          )}
-
-          <div className="flex gap-2.5">
-            <div className="shrink-0 w-8 h-8 rounded-full bg-[#0f0f13] border border-[#2d2d3a] flex items-center justify-center text-xs font-bold text-[#64748b]">
-              {i + 1}
-            </div>
-            <div className="flex-1 bg-[#0f0f13] border border-[#2d2d3a] rounded-lg px-3 py-2.5 mb-2">
-              <p className="text-sm text-[#cbd5e1] leading-relaxed whitespace-pre-wrap">
-                {tweet}
-              </p>
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-  )
-}
 
 export default async function HubPage() {
   const currentWeekNum = getCurrentWeekNumber()
@@ -166,8 +141,6 @@ export default async function HubPage() {
   const newsletterCopyText = `ASSUNTO: ${displayWeek.newsletter.subject}\n\nPREVIEW: ${displayWeek.newsletter.preview_text}\n\n${displayWeek.newsletter.body}`
   const linkedInCopyText = `${displayWeek.linkedin.hook}\n\n${displayWeek.linkedin.body}`
   const instagramCopyText = displayWeek.instagram.caption
-  const twitterCopyText = displayWeek.twitter.thread.join('\n\n---\n\n')
-
   return (
     <div className="min-h-screen bg-[#0f0f13]">
       <TopBar week={displayWeek} />
@@ -268,16 +241,12 @@ export default async function HubPage() {
           </PlatformCard>
 
           {/* X/Twitter */}
-          <PlatformCard
-            platform="X"
-            pilar={displayWeek.pilar}
+          <XCard
+            content={displayWeek.twitter}
             week={displayWeek.week}
+            pilar={displayWeek.pilar}
             status={displayWeek.status}
-            copyText={twitterCopyText}
-            openUrl="https://twitter.com/compose/tweet"
-          >
-            <TwitterBody content={displayWeek.twitter} />
-          </PlatformCard>
+          />
         </div>
       </main>
     </div>
