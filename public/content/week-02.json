@@ -5,6 +5,8 @@
   "brief_summary": "IA no diagnóstico médico: o que está chegando e o que os médicos ainda não perceberam",
   "status": "planned",
   "newsletter": {
+    "title": "A IA já diagnostica melhor que médicos em 3 especialidades. E agora?",
+    "subtitle": "O que muda quando o modelo acerta mais que o especialista — e o que os médicos ainda não perceberam.",
     "subject": "A IA já diagnostica melhor que médicos em 3 especialidades. E agora?",
     "preview_text": "O que muda quando o modelo acerta mais que o especialista",
     "body": "Em dezembro, um estudo publicado no NEJM mostrou que um modelo de IA diagnosticou câncer de mama em mamografias com 11% menos falsos negativos que radiologistas experientes.\n\nNão foi uma surpresa para quem acompanha a área. Foi uma confirmação.\n\nJá temos modelos que superam médicos em:\n— Detecção de retinopatia diabética (Google Health, 2019)\n— Diagnóstico de câncer de pele (Stanford, 2017)\n— Leitura de ECG para fibrilação atrial (Apple/Stanford, 2019)\n\nA pergunta que os médicos fazem é errada. Não é \"a IA vai substituir médicos?\". É \"o que acontece com os médicos que não usam IA, quando os que usam ficarem muito melhores?\"\n\nIsso está chegando no Brasil. Mais rápido do que a regulamentação do CFM consegue acompanhar.\n\nNo Prevvine e StaiDoc, estamos navegando exatamente nessa tensão: ferramentas de IA que ajudam o médico, não o substituem. Pelo menos por enquanto.\n\nA janela para construir nesse espaço é agora. Daqui a 3 anos, os grandes players internacionais vão dominar as APIs.",

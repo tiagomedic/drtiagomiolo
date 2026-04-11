@@ -8,8 +8,9 @@ export interface ContentVersion {
 }
 
 export interface NewsletterContent {
-  subject: string
+  title: string
   subtitle: string
+  subject: string
   preview_text: string
   body: string
   word_count: number

@@ -11,15 +11,11 @@ import { redirect } from 'next/navigation'
 function NewsletterBody({ content }: { content: WeekContent['newsletter'] }) {
   return (
     <div className="space-y-3">
-      {/* Subject + score */}
-      <div className="flex items-start justify-between gap-3">
-        <div className="min-w-0">
-          <p className="text-xs text-[#64748b] font-medium mb-1">Assunto</p>
-          <p className="text-[#e2e8f0] text-sm font-semibold leading-snug">{content.subject}</p>
-        </div>
-        <div className="shrink-0 flex flex-col items-center">
+      {/* Score badge */}
+      <div className="flex justify-end">
+        <div className="flex flex-col items-center">
           <div
-            className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-black border-2"
+            className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-black border-2"
             style={{
               borderColor: content.editorial_score >= 85 ? '#10b981' : content.editorial_score >= 70 ? '#f59e0b' : '#ef4444',
               color: content.editorial_score >= 85 ? '#10b981' : content.editorial_score >= 70 ? '#f59e0b' : '#ef4444',
@@ -31,38 +27,41 @@ function NewsletterBody({ content }: { content: WeekContent['newsletter'] }) {
         </div>
       </div>
 
-      {/* Subtitle */}
+      {/* Título — campo "Title" no Beehiiv */}
+      <div className="bg-[#0f0f13] border border-[#2d2d3a] rounded-lg px-3 py-2.5">
+        <p className="text-[10px] text-[#475569] font-semibold uppercase tracking-widest mb-1">Título · Beehiiv "Title"</p>
+        <p className="text-[#e2e8f0] text-sm font-bold leading-snug">{content.title}</p>
+      </div>
+
+      {/* Subtítulo — campo "Subtitle" no Beehiiv */}
       {content.subtitle && (
-        <div>
-          <p className="text-xs text-[#64748b] font-medium mb-1">Subtítulo</p>
-          <p className="text-[#94a3b8] text-sm">{content.subtitle}</p>
+        <div className="bg-[#0f0f13] border border-[#2d2d3a] rounded-lg px-3 py-2.5">
+          <p className="text-[10px] text-[#475569] font-semibold uppercase tracking-widest mb-1">Subtítulo · Beehiiv "Subtitle"</p>
+          <p className="text-[#94a3b8] text-sm leading-snug">{content.subtitle}</p>
         </div>
       )}
 
+      {/* Assunto do email — campo "Subject line" no Beehiiv (aba Email) */}
+      <div className="bg-[#0f0f13] border border-[#2d2d3a] rounded-lg px-3 py-2.5">
+        <p className="text-[10px] text-[#475569] font-semibold uppercase tracking-widest mb-1">Assunto · Beehiiv "Subject line" (aba Email)</p>
+        <p className="text-[#e2e8f0] text-sm leading-snug">{content.subject}</p>
+      </div>
+
       {/* Preview text */}
       <div>
-        <p className="text-xs text-[#64748b] font-medium mb-1">Preview (preheader)</p>
+        <p className="text-[10px] text-[#475569] font-semibold uppercase tracking-widest mb-1">Preview · Beehiiv "Preview text"</p>
         <p className="text-[#94a3b8] text-sm italic">&ldquo;{content.preview_text}&rdquo;</p>
       </div>
 
-      {/* Body excerpt */}
+      {/* Corpo */}
       <div>
-        <p className="text-xs text-[#64748b] font-medium mb-1">Corpo ({content.word_count} palavras)</p>
+        <p className="text-[10px] text-[#475569] font-semibold uppercase tracking-widest mb-1">Corpo ({content.word_count} palavras)</p>
         <div className="bg-[#0f0f13] border border-[#2d2d3a] rounded-lg p-3 max-h-48 overflow-y-auto">
           <p className="content-body text-sm text-[#cbd5e1] whitespace-pre-wrap leading-relaxed">
             {content.body}
           </p>
         </div>
       </div>
-
-      {/* Versions */}
-      {content.versions && content.versions.length > 0 && (
-        <div>
-          <p className="text-xs text-[#64748b] font-medium">
-            {content.versions.length} versao{content.versions.length > 1 ? 'es' : ''} salva{content.versions.length > 1 ? 's' : ''}
-          </p>
-        </div>
-      )}
     </div>
   )
 }
@@ -146,7 +145,7 @@ export default async function HubPage() {
   const nextWeekCalendar = calendar.find(w => w.week === displayWeek.week + 1)
   const nextPilar = nextWeekCalendar?.pilar || 'CONSTRUTOR'
 
-  const newsletterCopyText = `ASSUNTO: ${displayWeek.newsletter.subject}\n\nSUBTÍTULO: ${displayWeek.newsletter.subtitle || ''}\n\nPREVIEW: ${displayWeek.newsletter.preview_text}\n\n${displayWeek.newsletter.body}`
+  const newsletterCopyText = `TÍTULO: ${displayWeek.newsletter.title || displayWeek.newsletter.subject}\n\nSUBTÍTULO: ${displayWeek.newsletter.subtitle || ''}\n\nASSUNTO DO EMAIL: ${displayWeek.newsletter.subject}\n\nPREVIEW: ${displayWeek.newsletter.preview_text}\n\n---\n\n${displayWeek.newsletter.body}`
   const linkedInCopyText = `${displayWeek.linkedin.hook}\n\n${displayWeek.linkedin.body}`
   const instagramCopyText = displayWeek.instagram.caption
   return (
