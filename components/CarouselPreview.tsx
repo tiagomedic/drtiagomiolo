@@ -55,23 +55,10 @@ function SlideModal({
             {slide.order}/{total}
           </div>
 
-          {/* Type badge */}
-          <div
-            className="absolute top-5 right-5 px-2 py-0.5 rounded-full text-xs font-medium"
-            style={{ backgroundColor: `${color}20`, color: color }}
-          >
-            {SLIDE_TYPE_LABELS[slide.type]}
-          </div>
-
           {/* Main text */}
           <p className="text-white text-2xl font-black text-center leading-snug whitespace-pre-line">
             {slide.text}
           </p>
-
-          {/* Handle */}
-          <div className="absolute bottom-5 right-5 text-xs font-medium" style={{ color: 'rgba(255,255,255,0.4)' }}>
-            @tiagomiolo
-          </div>
 
           {/* Logo mark */}
           <div
