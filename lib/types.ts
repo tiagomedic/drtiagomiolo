@@ -9,6 +9,7 @@ export interface ContentVersion {
 
 export interface NewsletterContent {
   subject: string
+  subtitle: string
   preview_text: string
   body: string
   word_count: number

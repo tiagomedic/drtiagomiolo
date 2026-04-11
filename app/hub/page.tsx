@@ -31,9 +31,17 @@ function NewsletterBody({ content }: { content: WeekContent['newsletter'] }) {
         </div>
       </div>
 
+      {/* Subtitle */}
+      {content.subtitle && (
+        <div>
+          <p className="text-xs text-[#64748b] font-medium mb-1">Subtítulo</p>
+          <p className="text-[#94a3b8] text-sm">{content.subtitle}</p>
+        </div>
+      )}
+
       {/* Preview text */}
       <div>
-        <p className="text-xs text-[#64748b] font-medium mb-1">Preview</p>
+        <p className="text-xs text-[#64748b] font-medium mb-1">Preview (preheader)</p>
         <p className="text-[#94a3b8] text-sm italic">&ldquo;{content.preview_text}&rdquo;</p>
       </div>
 
@@ -138,7 +146,7 @@ export default async function HubPage() {
   const nextWeekCalendar = calendar.find(w => w.week === displayWeek.week + 1)
   const nextPilar = nextWeekCalendar?.pilar || 'CONSTRUTOR'
 
-  const newsletterCopyText = `ASSUNTO: ${displayWeek.newsletter.subject}\n\nPREVIEW: ${displayWeek.newsletter.preview_text}\n\n${displayWeek.newsletter.body}`
+  const newsletterCopyText = `ASSUNTO: ${displayWeek.newsletter.subject}\n\nSUBTÍTULO: ${displayWeek.newsletter.subtitle || ''}\n\nPREVIEW: ${displayWeek.newsletter.preview_text}\n\n${displayWeek.newsletter.body}`
   const linkedInCopyText = `${displayWeek.linkedin.hook}\n\n${displayWeek.linkedin.body}`
   const instagramCopyText = displayWeek.instagram.caption
   return (
