@@ -1,0 +1,92 @@
+{
+  "event": "41ª Jornada Sul Brasileira de Cirurgia Plástica",
+  "location": "Porto Alegre / RS",
+  "dates": "23 a 25/04/2026",
+  "role": "Moderador — Sala Principal — 12:30 às 13:00",
+  "talk_title": "Machine Learning: Artificial Intelligence for Plastic Surgery",
+  "note": "Moderador = especialista referência na área. Ângulo: médico que constrói IA em saúde moderando palestra sobre IA em cirurgia plástica.",
+
+  "posts": [
+
+    {
+      "day": "SEGUNDA — 20/04",
+      "platform": "LinkedIn",
+      "status": "pronto",
+      "timing": "Postar hoje à noite ou amanhã cedo",
+      "hook": "Na quinta vou estar no palco da maior jornada de cirurgia plástica do Sul do Brasil.\n\nNão como palestrante. Como moderador.",
+      "body": "Moderadores são os especialistas da área.\n\nSão escolhidos porque conhecem o tema fundo o suficiente para conduzir, questionar e aprofundar o que o palestrante traz.\n\nO tema da sessão: Machine Learning e Inteligência Artificial em Cirurgia Plástica.\n\nÉ exatamente o cruzamento que estou construindo há anos — cirurgia plástica + tecnologia em saúde.\n\nNo Prevvine e StaiDoc, desenvolvemos ferramentas de IA para decisão clínica. Uso isso na prática. Conheço os limites e o potencial de dentro.\n\nNa quinta, vou moderar uma conversa que a maioria das especialidades ainda está adiando.\n\nA cirurgia plástica está prestes a mudar.\n\nNão por causa de tendências. Por causa de dados.",
+      "banger": "41ª Jornada Sul Brasileira de Cirurgia Plástica — Porto Alegre, 23/04.",
+      "instructions": "Postar o texto SEM imagem primeiro. Após 30 min de tração, editar e adicionar a imagem do evento (print da página do congresso com seu nome)."
+    },
+
+    {
+      "day": "SEGUNDA — 20/04",
+      "platform": "X/Twitter",
+      "status": "pronto",
+      "timing": "Mesmo dia que o LinkedIn, 1h depois",
+      "thread": [
+        "Na quinta vou moderar uma palestra sobre IA em cirurgia plástica na 41ª Jornada Sul Brasileira.\n\nModerador = especialista da área.\n\nE esse é exatamente o cruzamento que estou construindo há anos.",
+        "O tema: Machine Learning aplicado à cirurgia plástica.\n\nNão é ficção científica.\nNão é hype de congresso.\n\nÉ o que já está acontecendo — e o que a maioria das especialidades ainda está adiando.",
+        "No Prevvine e StaiDoc, construímos IA para decisão clínica.\n\nConheço os limites e o potencial de dentro.\nNão de paper. De produto em uso.",
+        "Porto Alegre, quinta-feira, 12:30.\n\nVou trazer o que aprendi moderando essa conversa aqui depois."
+      ]
+    },
+
+    {
+      "day": "SEGUNDA — 20/04",
+      "platform": "Instagram",
+      "status": "pronto",
+      "timing": "Postar junto com LinkedIn",
+      "type": "Feed — usar a imagem do print do evento (screenshot com seu nome e atividade)",
+      "caption": "Na quinta modero uma palestra sobre IA em cirurgia plástica na 41ª Jornada Sul Brasileira — Porto Alegre.\n\nModerador é o especialista da área na mesa.\n\nÉ o cruzamento que estou construindo: cirurgia plástica + inteligência artificial.\n\nVolto com o que aprendi.\n\n#cirurgiaplastica #inteligenciaartificial #ia #medicina #healthtech #sbcp #congressomedico"
+    },
+
+    {
+      "day": "QUARTA — 22/04",
+      "platform": "Instagram Stories",
+      "status": "pronto",
+      "timing": "Durante a viagem ou chegada em Porto Alegre",
+      "type": "Story — selfie no aeroporto, hotel ou rua de POA",
+      "script": "Texto na tela: 'Porto Alegre'\n\nSegundo story: 'Amanhã modero palestra sobre IA em cirurgia plástica na Jornada Sul Brasileira. O que a especialidade ainda não quer discutir abertamente.'\n\nTerceiro story (opcional): foto da cidade / hotel com sticker de localização Porto Alegre"
+    },
+
+    {
+      "day": "QUINTA — 23/04",
+      "platform": "Instagram Stories",
+      "status": "pronto",
+      "timing": "Antes da sessão (12h) ou logo após (13h)",
+      "type": "Story — foto no espaço do evento, sala ou bastidores",
+      "script": "Antes: 'Em 30 minutos começa. Sala Principal.'\n\nDepois: foto no palco ou com o palestrante. Texto: 'Feito. Esse é o futuro da especialidade.'"
+    },
+
+    {
+      "day": "QUINTA — 23/04",
+      "platform": "LinkedIn",
+      "status": "pronto",
+      "timing": "Durante o intervalo ou ao fim do dia",
+      "hook": "Acabei de moderar uma palestra sobre IA em cirurgia plástica para centenas de cirurgiões.",
+      "body": "A reação da plateia disse mais do que o conteúdo.\n\nFalei sobre isso aqui na semana passada — a regulação está chegando, os dados estão prontos, a tecnologia existe.\n\nO que ainda falta é a mentalidade.\n\nAmanhã trago a reflexão completa.",
+      "banger": "O maior obstáculo para IA em cirurgia plástica não é tecnologia. É aceitação.",
+      "instructions": "Post curto. Objetivo: gerar expectativa pro post de sexta."
+    },
+
+    {
+      "day": "SEXTA — 24/04 (ou sábado)",
+      "platform": "LinkedIn + X",
+      "status": "pronto",
+      "timing": "Post mais importante da semana — publicar sexta à tarde ou sábado de manhã",
+      "hook": "Moderem uma palestra sobre IA para 500 cirurgiões plásticos.\n\nO que acontece depois diz tudo sobre onde a especialidade está.",
+      "body": "Ontem fiz isso na 41ª Jornada Sul Brasileira de Cirurgia Plástica.\n\nO palestrante apresentou dados reais. Modelos que analisam imagens pré e pós-operatórias. Algoritmos que auxiliam no planejamento cirúrgico.\n\nA tecnologia existe. Funciona. Está sendo usada.\n\nA reação da sala foi dividida.\n\nUma parte — geralmente os mais jovens — reconheceu o que estava vendo: o início de uma mudança estrutural na especialidade.\n\nOutra parte — e não estou julgando, fiz a mesma pergunta anos atrás — perguntou: 'mas e a responsabilidade? e a relação com o paciente? e se o algoritmo errar?'\n\nEssas perguntas são legítimas.\n\nE são exatamente as que quem está construindo IA para medicina precisa responder antes de lançar qualquer produto.\n\nNo Prevvine e StaiDoc, vivemos essa tensão toda semana.\n\nA IA não substitui o julgamento do cirurgião.\nEla amplia o que é possível enxergar antes de uma decisão.\n\nA diferença entre os dois campos de reação na sala ontem:\n\nUm vê ameaça. O outro vê ferramenta.\n\nOs que chegaram primeiro à segunda visão vão liderar a próxima década da especialidade.",
+      "banger": "A cirurgia plástica vai mudar. A pergunta é quem vai liderar essa mudança.",
+      "x_thread": [
+        "Moderem uma palestra sobre IA para 500 cirurgiões plásticos.\n\nO que acontece depois diz tudo sobre onde a especialidade está.\n\nOntem fiz isso na 41ª Jornada Sul Brasileira. Thread 🧵",
+        "O palestrante apresentou dados reais: modelos que analisam imagens pré e pós-operatórias, algoritmos que auxiliam no planejamento cirúrgico.\n\nA tecnologia existe. Funciona.",
+        "A sala dividiu.\n\nMetade reconheceu: isso é o início de uma mudança estrutural.\n\nMetade perguntou: e a responsabilidade? e se errar? e a relação com o paciente?\n\nAmbas as reações são legítimas.",
+        "Mas há uma diferença:\n\nUma vê ameaça.\nA outra vê ferramenta.\n\nOs que chegaram à segunda visão primeiro vão liderar a próxima década da especialidade.",
+        "A IA não substitui o julgamento do cirurgião.\nEla amplia o que é possível enxergar antes de uma decisão.\n\nÉ exatamente o que construímos no Prevvine e StaiDoc.\n\nA cirurgia plástica vai mudar. A pergunta é quem vai liderar."
+      ],
+      "instructions": "Esse é o post mais valioso da semana. Depende da reação real que você observar na quinta. Adapte o 'A reação da sala foi dividida' com o que realmente aconteceu."
+    }
+
+  ]
+}
