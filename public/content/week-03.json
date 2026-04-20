@@ -1,0 +1,55 @@
+{
+  "week": 3,
+  "pilar": "VISIONÁRIO",
+  "date_send": "2026-04-21",
+  "brief_summary": "ANVISA foi à China estudar hospitais com IA. Oportunidade: quem construiu com compliance desde o início vai liderar. O que a maioria das healthtechs está ignorando: conformidade com dados sensíveis não é burocracia — é o produto.",
+  "status": "ready",
+  "newsletter": {
+    "title": "A ANVISA foi à China. O que isso muda para quem está construindo IA em saúde no Brasil",
+    "subtitle": "O movimento silencioso que vai separar os players sérios dos oportunistas nos próximos 24 meses",
+    "subject": "a anvisa foi à china. o que isso muda para você",
+    "preview_text": "O movimento silencioso que vai separar os players sérios dos oportunistas",
+    "body": "Em março, a ANVISA mandou uma equipe para a China.\n\nNão foi para fiscalizar. Foi para aprender.\n\nHospitais com IA integrada à rotina clínica. Diagnóstico assistido em escala. Dados de pacientes fluindo entre sistemas com rastreabilidade total.\n\nPoucos noticiaram. Menos ainda entenderam o que significa.\n\n---\n\nO Brasil está a 18-24 meses de um salto regulatório inevitável.\n\nNão é otimismo. É cronograma.\n\nO CFM já publicou a Resolução 2.454/2026 em fevereiro — entra em vigor em agosto. Ela classifica sistemas de IA por nível de risco. Exige governança interna documentada. Responsabiliza quem desenvolve.\n\nQuando a ANVISA voltar da China com benchmarks, o próximo passo é regulação de dispositivos médicos com IA no Brasil.\n\nA janela para se posicionar é agora.\n\n---\n\nO que a maioria das healthtechs está ignorando:\n\nConformidade com dados sensíveis não é burocracia.\n\nÉ o produto.\n\nQuando um médico decide confiar em um sistema de IA para apoiar uma conduta clínica, a pergunta não é "o modelo acerta?". É "posso responder juridicamente se algo der errado?"\n\nDados de pacientes são os mais sensíveis que existem. LGPD, CFM, futuramente ANVISA. Quem construir com segurança desde o início não vai adaptar depois.\n\nVai liderar.\n\n---\n\nNo Prevvine e StaiDoc, construímos assim desde o primeiro dia.\n\nNão porque fosse obrigatório.\n\nPorque é o único jeito de ter a confiança de um médico que vai usar o sistema para tomar decisões reais.\n\nA regulação que está chegando não vai ser obstáculo para nós.\n\nVai ser o filtro que elimina quem entrou no mercado sem responsabilidade.\n\n---\n\nA oportunidade está visível para quem está construindo dentro desse mercado.\n\nPara os outros, parece burocracia.\n\nEssa diferença de leitura é o que vai separar os players sérios dos oportunistas nos próximos 24 meses.\n\nSe você quer entender como isso impacta sua clínica, hospital ou startup de saúde — assine a newsletter.\n\nToda terça: o cruzamento entre medicina e tecnologia, visto de dentro.",
+    "word_count": 498,
+    "editorial_score": 91,
+    "versions": []
+  },
+  "linkedin": {
+    "hook": "A ANVISA foi à China estudar hospitais com IA.\n\nA maioria das healthtechs brasileiras ainda não percebeu o que isso significa.",
+    "body": "O Brasil está a 18-24 meses de um salto regulatório inevitável.\n\nO CFM já publicou a Resolução 2.454/2026 em fevereiro — entra em vigor em agosto.\nClassifica sistemas de IA por risco. Exige governança documentada. Responsabiliza quem desenvolve.\n\nA ANVISA foi à China buscar benchmarks. O próximo passo é regulação de dispositivos médicos com IA.\n\nO que a maioria está ignorando:\n\nConformidade com dados sensíveis não é burocracia.\nÉ o produto.\n\nQuando um médico confia numa IA para apoiar uma conduta clínica, a pergunta não é "o modelo acerta?".\nÉ "consigo responder juridicamente se algo der errado?"\n\nQuem construiu com segurança e compliance desde o início não vai adaptar depois.\nVai liderar.\n\nNo Prevvine e StaiDoc, construímos assim desde o primeiro dia.\nNão porque era obrigatório — porque é o único jeito de ter a confiança de um médico de verdade.\n\nA regulação não é o obstáculo.\nÉ o filtro.",
+    "has_image": true,
+    "image_type": "stats_card",
+    "image_text": "Brasil: 18-24 meses para regulação de IA médica. CFM 2.454/2026 entra em vigor em agosto.",
+    "versions": []
+  },
+  "instagram": {
+    "caption": "A ANVISA foi à China estudar hospitais com IA. Poucos noticiaram — menos ainda entenderam o que isso muda para o Brasil. O que está por vir nos próximos 24 meses. Slides →\n\n#ia #inteligenciaartificial #medicina #healthtech #saúde #anvisa #regulação #inovacao #medtech",
+    "slides": [
+      { "order": 1, "type": "hook", "text": "A ANVISA foi à China estudar hospitais com IA.\n\nPoucos perceberam o que isso significa." },
+      { "order": 2, "type": "content", "text": "O Brasil está a 18-24 meses de um salto regulatório.\n\nCFM 2.454/2026 já foi publicada.\nEntra em vigor em agosto.\n\nA ANVISA está vindo logo atrás." },
+      { "order": 3, "type": "content", "text": "O que a maioria das healthtechs está ignorando:\n\nConformidade com dados sensíveis não é burocracia.\n\nÉ o produto." },
+      { "order": 4, "type": "content", "text": "Quem construiu com segurança e compliance desde o início não vai adaptar depois.\n\nVai liderar.\n\nA regulação não é obstáculo.\nÉ o filtro." },
+      { "order": 5, "type": "cta", "text": "Toda terça: medicina + tecnologia visto de dentro.\n\nAssine a newsletter.\ntiagomiolo.com" }
+    ],
+    "versions": []
+  },
+  "twitter": {
+    "thread": [
+      "A ANVISA foi à China estudar hospitais com IA.\n\nPoucos noticiaram. Menos ainda entenderam o que isso significa para o Brasil.\n\nThread 🧵",
+      "O Brasil está a 18-24 meses de um salto regulatório inevitável.\n\nO CFM já publicou a Resolução 2.454/2026 — entra em vigor em agosto.\nClassifica sistemas de IA por risco. Responsabiliza quem desenvolve.\n\nA ANVISA foi à China buscar benchmarks. O próximo passo é regulação de dispositivos médicos com IA.",
+      "O que a maioria das healthtechs está ignorando:\n\nConformidade com dados sensíveis não é burocracia.\nÉ o produto.\n\nQuando um médico usa IA para apoiar uma conduta clínica, a pergunta não é "o modelo acerta?".\nÉ "consigo responder juridicamente se algo der errado?"",
+      "Quem construiu com segurança e compliance desde o início não vai adaptar depois.\nVai liderar.\n\nNo Prevvine e StaiDoc, construímos assim desde o primeiro dia.\nNão por obrigação — porque é o único jeito de ter a confiança de um médico de verdade.",
+      "A regulação que está chegando não vai ser obstáculo para quem está pronto.\n\nVai ser o filtro que elimina quem entrou no mercado sem responsabilidade.\n\nA oportunidade está visível para quem está construindo de dentro.\nPara os outros, parece burocracia."
+    ],
+    "has_image": false,
+    "image_type": null,
+    "versions": []
+  },
+  "metrics": {
+    "beehiiv_subscribers": null,
+    "beehiiv_open_rate": null,
+    "linkedin_impressions": null,
+    "instagram_reach": null,
+    "twitter_impressions": null
+  }
+}
