@@ -149,7 +149,7 @@ export default async function WeekPage({ params }: PageProps) {
     date_send: cw.date_send,
     brief_summary: cw.theme_suggestion,
     status: 'planned',
-    newsletter: { subject: '', preview_text: '', body: '', word_count: 0, editorial_score: 0, versions: [] },
+    newsletter: { title: '', subtitle: '', subject: '', preview_text: '', body: '', word_count: 0, editorial_score: 0, versions: [] },
     linkedin: { hook: '', body: '', has_image: false, image_type: null, image_text: null, versions: [] },
     instagram: { caption: '', slides: [], versions: [] },
     twitter: { thread: [], has_image: false, image_type: null, versions: [] },
