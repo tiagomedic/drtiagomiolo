@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { notFound } from 'next/navigation'
 import { getWeekContent, getAllWeeks, countPublishedWeeks } from '@/lib/content'
 import { generateCalendar, getPilarGradient, getPilarColor } from '@/lib/calendar'
@@ -247,7 +249,7 @@ export default async function WeekPage({ params }: PageProps) {
             copyText={newsletterCopyText}
             openUrl="https://app.beehiiv.com"
           >
-            {displayWeek.status !== 'planned' && <NewsletterBody content={displayWeek.newsletter} />}
+            {displayWeek.newsletter.body ? <NewsletterBody content={displayWeek.newsletter} /> : null}
           </PlatformCard>
 
           <PlatformCard
@@ -258,7 +260,7 @@ export default async function WeekPage({ params }: PageProps) {
             copyText={linkedInCopyText}
             openUrl="https://www.linkedin.com/feed/"
           >
-            {displayWeek.status !== 'planned' && <LinkedInBody content={displayWeek.linkedin} />}
+            {displayWeek.linkedin.body ? <LinkedInBody content={displayWeek.linkedin} /> : null}
           </PlatformCard>
 
           <PlatformCard
@@ -277,7 +279,7 @@ export default async function WeekPage({ params }: PageProps) {
               ) : undefined
             }
           >
-            {displayWeek.status !== 'planned' && <InstagramBody content={displayWeek.instagram} />}
+            {displayWeek.instagram.caption ? <InstagramBody content={displayWeek.instagram} /> : null}
           </PlatformCard>
 
           <PlatformCard
@@ -288,7 +290,7 @@ export default async function WeekPage({ params }: PageProps) {
             copyText={twitterCopyText}
             openUrl="https://twitter.com/compose/tweet"
           >
-            {displayWeek.status !== 'planned' && <TwitterBody content={displayWeek.twitter} />}
+            {displayWeek.twitter.thread.length > 0 ? <TwitterBody content={displayWeek.twitter} /> : null}
           </PlatformCard>
         </div>
       </main>
