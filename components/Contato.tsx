@@ -44,7 +44,7 @@ export default function Contato() {
             contato@drtiagomiolo.com.br
           </a>
           <a
-            href="https://linkedin.com/in/tiagomiolo"
+            href="https://www.linkedin.com/in/tiago-miolo/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 border border-zinc-800 rounded-full px-6 py-3 hover:border-zinc-500 hover:text-white transition-colors text-zinc-300 text-sm font-semibold tracking-widest uppercase"
