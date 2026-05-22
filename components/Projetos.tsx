@@ -59,37 +59,39 @@ export default function Projetos() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {projetos.map((p, i) => (
-            <motion.a
-              key={p.num}
-              href={p.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-zinc-800 rounded-2xl p-8 flex flex-col gap-4 hover:border-zinc-600 transition-colors group"
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: '-60px' }}
-              custom={i}
-            >
-              <div className="flex items-start justify-between">
-                <span className="text-xs font-semibold tracking-widest uppercase text-zinc-600">
-                  {p.num}
-                </span>
-                <ArrowUpRight
-                  size={16}
-                  className="text-zinc-600 group-hover:text-white transition-colors"
-                />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-1">{p.name}</h3>
-                <p className="text-xs font-semibold tracking-widest uppercase text-zinc-400">
-                  {p.tagline}
-                </p>
-              </div>
-              <p className="text-sm text-zinc-400 leading-relaxed">{p.desc}</p>
-            </motion.a>
-          ))}
+          {projetos.map((p, i) => {
+            const isExternal = p.url !== '#'
+            return (
+              <motion.a
+                key={p.num}
+                href={p.url}
+                {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                className="border border-zinc-800 rounded-2xl p-8 flex flex-col gap-4 hover:border-zinc-600 transition-colors group"
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: '-60px' }}
+                custom={i}
+              >
+                <div className="flex items-start justify-between">
+                  <span className="text-xs font-semibold tracking-widest uppercase text-zinc-600">
+                    {p.num}
+                  </span>
+                  <ArrowUpRight
+                    size={16}
+                    className="text-zinc-600 group-hover:text-white transition-colors"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-1">{p.name}</h3>
+                  <p className="text-xs font-semibold tracking-widest uppercase text-zinc-400">
+                    {p.tagline}
+                  </p>
+                </div>
+                <p className="text-sm text-zinc-400 leading-relaxed">{p.desc}</p>
+              </motion.a>
+            )
+          })}
         </div>
       </div>
     </section>

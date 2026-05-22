@@ -73,6 +73,7 @@ export default function DnaCanvas() {
     helix.add(new THREE.Line(lineGeo1, lineMat1))
     helix.add(new THREE.Line(lineGeo2, lineMat2))
 
+    const bridgeGeos: THREE.CylinderGeometry[] = []
     for (let i = 0; i < NUM_POINTS; i += 5) {
       const v1 = positions1[i]
       const v2 = positions2[i]
@@ -81,6 +82,7 @@ export default function DnaCanvas() {
       const len = dir.length()
 
       const bridgeGeo = new THREE.CylinderGeometry(0.025, 0.025, len, 6)
+      bridgeGeos.push(bridgeGeo)
       const bridge = new THREE.Mesh(bridgeGeo, bridgeMat)
       bridge.position.copy(mid)
 
@@ -111,6 +113,15 @@ export default function DnaCanvas() {
       ro.disconnect()
       mount.removeChild(renderer.domElement)
       renderer.dispose()
+      sphereGeo.dispose()
+      mat1.dispose()
+      mat2.dispose()
+      bridgeMat.dispose()
+      lineGeo1.dispose()
+      lineGeo2.dispose()
+      lineMat1.dispose()
+      lineMat2.dispose()
+      bridgeGeos.forEach(g => g.dispose())
     }
   }, [])
 

@@ -7,6 +7,13 @@ import DnaCanvas from './DnaCanvas'
 
 const NAV_LINKS = ['Sobre Mim', 'Expertise', 'Projetos', 'Contato']
 
+const sectionIds: Record<string, string> = {
+  'Sobre Mim': 'sobre-mim',
+  Expertise: 'expertise',
+  Projetos: 'projetos',
+  Contato: 'contato',
+}
+
 const fadeDown = {
   hidden: { opacity: 0, y: -20 },
   visible: (i: number) => ({
@@ -31,13 +38,6 @@ export default function Hero() {
   const scrollTo = (id: string) => {
     setMenuOpen(false)
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-  }
-
-  const sectionIds: Record<string, string> = {
-    'Sobre Mim': 'sobre-mim',
-    Expertise: 'expertise',
-    Projetos: 'projetos',
-    Contato: 'contato',
   }
 
   return (

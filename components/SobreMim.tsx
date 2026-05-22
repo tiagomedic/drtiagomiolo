@@ -21,7 +21,7 @@ export default function SobreMim() {
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
         >
-          <div className="w-full h-full flex items-center justify-center bg-zinc-200">
+          <div className="w-full h-full flex items-center justify-center bg-zinc-200" aria-hidden="true">
             <span className="text-zinc-400 font-semibold tracking-widest uppercase text-sm">
               Foto
             </span>
