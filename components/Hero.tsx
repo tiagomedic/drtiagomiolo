@@ -78,7 +78,8 @@ export default function Hero() {
                   onClick={() => scrollTo(sectionIds[link])}
                   variant="ghost"
                   size="sm"
-                  className="text-white/80 hover:text-white text-[11px] font-semibold tracking-widest uppercase"
+                  neon={false}
+                  className="text-white/60 hover:text-white text-[11px] font-semibold tracking-widest uppercase"
                 >
                   {link}
                 </NeonButton>

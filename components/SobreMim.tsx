@@ -12,9 +12,18 @@ export default function SobreMim() {
   return (
     <section
       id="sobre-mim"
-      className="bg-black text-white py-24 px-5 sm:px-8 md:px-16 lg:px-24"
+      className="relative bg-black text-white py-32 px-5 sm:px-8 md:px-16 lg:px-24 overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      {/* Número âncora de fundo */}
+      <span
+        aria-hidden
+        className="pointer-events-none select-none absolute -top-6 right-0 font-semibold text-white/[0.03] leading-none"
+        style={{ fontSize: 'clamp(8rem, 22vw, 18rem)' }}
+      >
+        01
+      </span>
+
+      <div className="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         {/* Foto com borda neon */}
         <motion.div
           className="group relative w-full aspect-[3/4] rounded-2xl overflow-hidden"
@@ -23,18 +32,13 @@ export default function SobreMim() {
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
         >
-          {/* Neon border frame */}
           <div className="absolute inset-0 rounded-2xl border border-blue-500/30 z-10 pointer-events-none" />
-          {/* Neon glow */}
           <div
             className="absolute inset-0 rounded-2xl z-10 pointer-events-none"
             style={{ boxShadow: '0 0 32px rgba(59,130,246,0.18), inset 0 0 24px rgba(59,130,246,0.06)' }}
           />
-          {/* Top line */}
           <div className="absolute top-0 left-[12.5%] w-3/4 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent opacity-60 z-10 pointer-events-none" />
-          {/* Bottom line */}
           <div className="absolute bottom-0 left-[12.5%] w-3/4 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent opacity-40 z-10 pointer-events-none" />
-
           <Image
             src="/foto-tiago.jpg"
             alt="Dr. Tiago Miolo"
@@ -45,29 +49,32 @@ export default function SobreMim() {
         </motion.div>
 
         <motion.div
-          className="flex flex-col gap-8"
+          className="flex flex-col gap-10"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
         >
-          <div>
-            <p className="text-xs font-semibold tracking-widest uppercase text-zinc-500 mb-3">
+          <div className="flex flex-col gap-6">
+            <p className="text-[11px] font-semibold tracking-[0.25em] uppercase text-zinc-500">
               Sobre Mim
             </p>
-            <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight leading-none mb-6 text-white">
+            <h2
+              className="font-semibold tracking-tight leading-none text-white"
+              style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
+            >
               Dr. Tiago Miolo
             </h2>
-            <div className="flex flex-col gap-4 text-sm sm:text-base text-zinc-400 leading-relaxed">
+            <div className="flex flex-col gap-4 text-[15px] text-zinc-400 leading-relaxed max-w-lg">
               <p>
                 Médico Cirurgião Plástico. Coordenador da Comissão de Inteligência
                 Artificial e Tecnologias da Sociedade Brasileira de Cirurgia Plástica (SBCP).
               </p>
               <p>
-                Fundador da <strong className="text-white">Prevvine</strong> — única
+                Fundador da <strong className="text-white font-semibold">Prevvine</strong> — única
                 healthtech de IA selecionada para o Sandbox Regulatório em Inteligência
                 Artificial da ANPD — e da{' '}
-                <strong className="text-white">StaiDoc</strong>, plataforma de
+                <strong className="text-white font-semibold">StaiDoc</strong>, plataforma de
                 diagnósticos baseados em evidências médicas.
               </p>
               <p>
@@ -78,7 +85,7 @@ export default function SobreMim() {
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2">
             {[
               'Cirurgia Plástica',
               'IA na Saúde',
@@ -89,7 +96,7 @@ export default function SobreMim() {
             ].map((tag) => (
               <span
                 key={tag}
-                className="px-3 py-1 border border-zinc-700 text-zinc-400 text-xs font-semibold tracking-widest uppercase rounded-full hover:border-blue-500/40 hover:text-white transition-colors duration-300"
+                className="px-3 py-1 border border-zinc-800 text-zinc-500 text-[10px] font-semibold tracking-[0.2em] uppercase rounded-full"
               >
                 {tag}
               </span>

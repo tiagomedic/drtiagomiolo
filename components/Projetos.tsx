@@ -40,25 +40,37 @@ export default function Projetos() {
   return (
     <section
       id="projetos"
-      className="bg-[#111111] text-white py-24 px-5 sm:px-8 md:px-16 lg:px-24"
+      className="relative bg-[#0a0a0a] text-white py-32 px-5 sm:px-8 md:px-16 lg:px-24 overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto">
+      {/* Número âncora de fundo */}
+      <span
+        aria-hidden
+        className="pointer-events-none select-none absolute -top-6 right-0 font-semibold text-white/[0.03] leading-none"
+        style={{ fontSize: 'clamp(8rem, 22vw, 18rem)' }}
+      >
+        03
+      </span>
+
+      <div className="relative max-w-6xl mx-auto">
         <motion.div
-          className="mb-16"
+          className="mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="text-xs font-semibold tracking-widest uppercase text-zinc-500 mb-3">
+          <p className="text-[11px] font-semibold tracking-[0.25em] uppercase text-zinc-500 mb-4">
             Projetos
           </p>
-          <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight leading-none">
+          <h2
+            className="font-semibold tracking-tight leading-none"
+            style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
+          >
             Empresas que<br />transformam saúde.
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {projetos.map((p, i) => {
             const isExternal = p.url !== '#'
             return (
@@ -66,7 +78,7 @@ export default function Projetos() {
                 key={p.num}
                 href={p.url}
                 {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                className="group relative border border-zinc-800 rounded-2xl p-8 flex flex-col gap-4 hover:border-blue-500/30 transition-all duration-500 overflow-hidden"
+                className="group relative border border-zinc-800 rounded-2xl p-8 flex flex-col gap-5 hover:border-blue-500/30 transition-all duration-500 overflow-hidden"
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
@@ -82,21 +94,21 @@ export default function Projetos() {
                 <div className="pointer-events-none absolute top-0 left-[12.5%] w-3/4 h-px opacity-0 group-hover:opacity-20 transition-opacity duration-500 bg-gradient-to-r from-transparent via-blue-400 to-transparent" />
 
                 <div className="flex items-start justify-between">
-                  <span className="text-xs font-semibold tracking-widest uppercase text-zinc-600">
+                  <span className="text-[11px] font-semibold tracking-[0.25em] uppercase text-zinc-700">
                     {p.num}
                   </span>
                   <ArrowUpRight
-                    size={16}
-                    className="text-zinc-600 group-hover:text-white transition-colors"
+                    size={15}
+                    className="text-zinc-700 group-hover:text-white transition-colors duration-300"
                   />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-1">{p.name}</h3>
-                  <p className="text-xs font-semibold tracking-widest uppercase text-zinc-400">
+                <div className="flex flex-col gap-1">
+                  <h3 className="text-xl font-semibold text-white">{p.name}</h3>
+                  <p className="text-[11px] font-semibold tracking-[0.2em] uppercase text-zinc-500">
                     {p.tagline}
                   </p>
                 </div>
-                <p className="text-sm text-zinc-400 leading-relaxed">{p.desc}</p>
+                <p className="text-[13px] text-zinc-400 leading-relaxed">{p.desc}</p>
               </motion.a>
             )
           })}

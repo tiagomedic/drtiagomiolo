@@ -56,57 +56,56 @@ export default function Expertise() {
   return (
     <section
       id="expertise"
-      className="bg-black text-white py-24 px-5 sm:px-8 md:px-16 lg:px-24"
+      className="relative bg-black text-white py-32 px-5 sm:px-8 md:px-16 lg:px-24 overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto">
+      {/* Número âncora de fundo */}
+      <span
+        aria-hidden
+        className="pointer-events-none select-none absolute -top-6 right-0 font-semibold text-white/[0.03] leading-none"
+        style={{ fontSize: 'clamp(8rem, 22vw, 18rem)' }}
+      >
+        02
+      </span>
+
+      <div className="relative max-w-6xl mx-auto">
         <motion.div
-          className="mb-16"
+          className="mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="text-xs font-semibold tracking-widest uppercase text-zinc-500 mb-3">
+          <p className="text-[11px] font-semibold tracking-[0.25em] uppercase text-zinc-500 mb-4">
             Expertise
           </p>
-          <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight leading-none text-white">
+          <h2
+            className="font-semibold tracking-tight leading-none text-white"
+            style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
+          >
             Quatro pilares,<br />uma visão.
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {cards.map((card, i) => (
             <motion.div
               key={card.num}
-              className="group relative bg-zinc-900/60 border border-zinc-800 rounded-2xl p-8 flex flex-col gap-6 hover:border-blue-500/30 transition-all duration-500 overflow-hidden"
+              className="group relative bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 flex flex-col gap-6 hover:border-zinc-600 transition-colors duration-300"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: '-60px' }}
               custom={i}
             >
-              {/* neon glow on hover */}
-              <div
-                className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                style={{ boxShadow: '0 0 24px rgba(59,130,246,0.14), inset 0 0 16px rgba(59,130,246,0.05)' }}
-              />
-              {/* bottom neon line */}
-              <div className="pointer-events-none absolute bottom-0 left-[12.5%] w-3/4 h-px opacity-0 group-hover:opacity-40 transition-opacity duration-500 bg-gradient-to-r from-transparent via-blue-400 to-transparent" />
-              {/* top neon line */}
-              <div className="pointer-events-none absolute top-0 left-[12.5%] w-3/4 h-px opacity-0 group-hover:opacity-20 transition-opacity duration-500 bg-gradient-to-r from-transparent via-blue-400 to-transparent" />
-
-              <span className="text-xs font-semibold tracking-widest uppercase text-zinc-600">
+              <span className="text-[11px] font-semibold tracking-[0.25em] uppercase text-zinc-700">
                 {card.num}
               </span>
-              <h3 className="text-xl font-semibold tracking-tight text-white">{card.title}</h3>
-              <ul className="flex flex-col gap-2">
+              <h3 className="text-lg font-semibold tracking-tight text-white">{card.title}</h3>
+              <ul className="flex flex-col gap-3">
                 {card.items.map((item) => (
-                  <li
-                    key={item}
-                    className="text-sm text-zinc-400 leading-relaxed flex items-start gap-2"
-                  >
-                    <span className="text-zinc-600 mt-1">—</span>
-                    {item}
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="text-zinc-700 text-[11px] mt-[3px] shrink-0">—</span>
+                    <span className="text-[13px] text-zinc-400 leading-snug">{item}</span>
                   </li>
                 ))}
               </ul>
