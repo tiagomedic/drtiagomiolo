@@ -47,9 +47,8 @@ export default function SobreMim() {
             </h2>
             <div className="flex flex-col gap-4 text-sm sm:text-base text-zinc-600 leading-relaxed">
               <p>
-                Cirurgião plástico com atuação em Belo Horizonte e São Paulo. Coordenador
-                da Comissão de Inteligência Artificial e Tecnologias da Sociedade
-                Brasileira de Cirurgia Plástica (SBCP).
+                Médico Cirurgião Plástico. Coordenador da Comissão de Inteligência
+                Artificial e Tecnologias da Sociedade Brasileira de Cirurgia Plástica (SBCP).
               </p>
               <p>
                 Fundador da <strong className="text-black">Prevvine</strong> — única

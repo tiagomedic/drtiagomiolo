@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowUpRight, X } from 'lucide-react'
 import DnaCanvas from './DnaCanvas'
+import { NeonButton } from './ui/neon-button'
 
 const NAV_LINKS = ['Sobre Mim', 'Expertise', 'Projetos', 'Contato']
 
@@ -64,19 +65,24 @@ export default function Hero() {
             TM
           </motion.span>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-3">
             {NAV_LINKS.map((link, i) => (
-              <motion.button
+              <motion.div
                 key={link}
-                onClick={() => scrollTo(sectionIds[link])}
-                className="text-white/80 hover:text-white text-[13px] font-semibold tracking-widest uppercase transition-colors"
                 variants={fadeDown}
                 initial="hidden"
                 animate="visible"
                 custom={i + 1}
               >
-                {link}
-              </motion.button>
+                <NeonButton
+                  onClick={() => scrollTo(sectionIds[link])}
+                  variant="ghost"
+                  size="sm"
+                  className="text-white/80 hover:text-white text-[11px] font-semibold tracking-widest uppercase"
+                >
+                  {link}
+                </NeonButton>
+              </motion.div>
             ))}
           </div>
 
@@ -188,17 +194,22 @@ export default function Hero() {
               Tecnologia
             </motion.p>
 
-            <motion.button
-              onClick={() => scrollTo('sobre-mim')}
-              className="flex items-center gap-2 text-white font-semibold tracking-widest uppercase whitespace-nowrap text-base sm:text-xl md:text-2xl hover:text-gray-300 transition-colors"
+            <motion.div
               variants={fadeUp}
               initial="hidden"
               animate="visible"
               custom={6}
             >
-              Saiba Mais
-              <ArrowUpRight size={18} className="sm:w-[22px] sm:h-[22px]" />
-            </motion.button>
+              <NeonButton
+                onClick={() => scrollTo('sobre-mim')}
+                variant="default"
+                size="lg"
+                className="flex items-center gap-2 text-white font-semibold tracking-widest uppercase whitespace-nowrap text-base sm:text-xl md:text-2xl"
+              >
+                Saiba Mais
+                <ArrowUpRight size={18} className="sm:w-[22px] sm:h-[22px]" />
+              </NeonButton>
+            </motion.div>
           </div>
 
           {/* Row B: descrição + heading */}

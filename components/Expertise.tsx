@@ -9,8 +9,7 @@ const cards = [
     items: [
       'Especialista pela SBCP e AMB',
       'Procedimentos estéticos e reconstrutivos',
-      'Membro ativo da SBCP e ISAPS',
-      'Atuação em BH e São Paulo',
+      'Membro ativo da SBCP',
     ],
   },
   {
@@ -30,8 +29,16 @@ const cards = [
     items: [
       'Prevvine — IA regulada (ANPD Sandbox)',
       'StaiDoc — diagnósticos por evidência',
-      'AuditMed — auditoria médica',
+      'Prevvine Auth — plataforma de autenticação',
       'Venture building em healthtech',
+    ],
+  },
+  {
+    num: '04',
+    title: 'Gestão e Liderança',
+    items: [
+      'Gestor Hospitalar',
+      'Diretor Hospitalar no HMC Private',
     ],
   },
 ]
@@ -63,21 +70,31 @@ export default function Expertise() {
             Expertise
           </p>
           <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight leading-none">
-            Três pilares,<br />uma visão.
+            Quatro pilares,<br />uma visão.
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((card, i) => (
             <motion.div
               key={card.num}
-              className="border border-zinc-200 rounded-2xl p-8 flex flex-col gap-6 hover:border-zinc-400 transition-colors"
+              className="group relative border border-zinc-200 rounded-2xl p-8 flex flex-col gap-6 hover:border-blue-500/30 transition-all duration-500 overflow-hidden"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: '-60px' }}
               custom={i}
             >
+              {/* neon glow on hover */}
+              <div
+                className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                style={{ boxShadow: '0 0 24px rgba(59,130,246,0.12), inset 0 0 16px rgba(59,130,246,0.04)' }}
+              />
+              {/* bottom neon line */}
+              <div className="pointer-events-none absolute bottom-0 left-[12.5%] w-3/4 h-px opacity-0 group-hover:opacity-40 transition-opacity duration-500 bg-gradient-to-r from-transparent via-blue-400 to-transparent" />
+              {/* top neon line */}
+              <div className="pointer-events-none absolute top-0 left-[12.5%] w-3/4 h-px opacity-0 group-hover:opacity-20 transition-opacity duration-500 bg-gradient-to-r from-transparent via-blue-400 to-transparent" />
+
               <span className="text-xs font-semibold tracking-widest uppercase text-zinc-300">
                 {card.num}
               </span>

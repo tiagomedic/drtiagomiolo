@@ -20,10 +20,10 @@ const projetos = [
   },
   {
     num: '03',
-    name: 'AuditMed',
-    tagline: 'Auditoria médica inteligente',
-    desc: 'Sistema de auditoria médica com conformidade à RN 623 da ANS. Automatiza glosas, análise de guias e relatórios de qualidade assistencial.',
-    url: 'https://auditmed.vercel.app',
+    name: 'Prevvine Auth',
+    tagline: 'Autenticação médica segura',
+    desc: 'Plataforma de autenticação e controle de acesso para profissionais e instituições de saúde, com conformidade regulatória e integração ao ecossistema Prevvine.',
+    url: 'https://prevvine.dev/',
   },
 ]
 
@@ -66,13 +66,21 @@ export default function Projetos() {
                 key={p.num}
                 href={p.url}
                 {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                className="border border-zinc-800 rounded-2xl p-8 flex flex-col gap-4 hover:border-zinc-600 transition-colors group"
+                className="group relative border border-zinc-800 rounded-2xl p-8 flex flex-col gap-4 hover:border-blue-500/30 transition-all duration-500 overflow-hidden"
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: '-60px' }}
                 custom={i}
               >
+                {/* neon glow */}
+                <div
+                  className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{ boxShadow: '0 0 28px rgba(59,130,246,0.1), inset 0 0 20px rgba(59,130,246,0.04)' }}
+                />
+                <div className="pointer-events-none absolute bottom-0 left-[12.5%] w-3/4 h-px opacity-0 group-hover:opacity-40 transition-opacity duration-500 bg-gradient-to-r from-transparent via-blue-400 to-transparent" />
+                <div className="pointer-events-none absolute top-0 left-[12.5%] w-3/4 h-px opacity-0 group-hover:opacity-20 transition-opacity duration-500 bg-gradient-to-r from-transparent via-blue-400 to-transparent" />
+
                 <div className="flex items-start justify-between">
                   <span className="text-xs font-semibold tracking-widest uppercase text-zinc-600">
                     {p.num}

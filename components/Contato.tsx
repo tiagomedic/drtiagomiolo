@@ -21,11 +21,10 @@ export default function Contato() {
             Contato
           </p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-none">
-            Vamos<br />Conversar.
+            Contato.
           </h2>
           <p className="text-zinc-400 text-base sm:text-lg max-w-md leading-relaxed">
-            Projetos em IA na saúde, parcerias em cirurgia plástica, palestras ou
-            colaborações institucionais.
+            Projetos em IA na saúde, palestras ou colaborações institucionais.
           </p>
         </motion.div>
 

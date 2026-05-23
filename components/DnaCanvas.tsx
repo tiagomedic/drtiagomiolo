@@ -35,9 +35,9 @@ export default function DnaCanvas() {
     const HEIGHT = 9
 
     const sphereGeo = new THREE.SphereGeometry(0.09, 10, 10)
-    const mat1 = new THREE.MeshBasicMaterial({ color: 0xffffff })
-    const mat2 = new THREE.MeshBasicMaterial({ color: 0x9ca3af })
-    const bridgeMat = new THREE.MeshBasicMaterial({ color: 0x27272a })
+    const mat1 = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.8 })
+    const mat2 = new THREE.MeshBasicMaterial({ color: 0x9ca3af, transparent: true, opacity: 0.8 })
+    const bridgeMat = new THREE.MeshBasicMaterial({ color: 0x27272a, transparent: true, opacity: 0.8 })
 
     const positions1: THREE.Vector3[] = []
     const positions2: THREE.Vector3[] = []
@@ -68,8 +68,8 @@ export default function DnaCanvas() {
 
     const lineGeo1 = new THREE.BufferGeometry().setFromPoints(positions1)
     const lineGeo2 = new THREE.BufferGeometry().setFromPoints(positions2)
-    const lineMat1 = new THREE.LineBasicMaterial({ color: 0xffffff, opacity: 0.6, transparent: true })
-    const lineMat2 = new THREE.LineBasicMaterial({ color: 0x9ca3af, opacity: 0.6, transparent: true })
+    const lineMat1 = new THREE.LineBasicMaterial({ color: 0xffffff, opacity: 0.48, transparent: true })
+    const lineMat2 = new THREE.LineBasicMaterial({ color: 0x9ca3af, opacity: 0.48, transparent: true })
     helix.add(new THREE.Line(lineGeo1, lineMat1))
     helix.add(new THREE.Line(lineGeo2, lineMat2))
 
