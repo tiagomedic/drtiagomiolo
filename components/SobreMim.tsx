@@ -63,7 +63,7 @@ export default function SobreMim() {
               className="font-semibold tracking-tight leading-none text-white"
               style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
             >
-              Dr. Tiago Miolo
+              Tiago Miolo
             </h2>
             <div className="flex flex-col gap-4 text-[15px] text-zinc-400 leading-relaxed max-w-lg">
               <p>

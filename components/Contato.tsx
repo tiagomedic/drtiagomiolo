@@ -33,7 +33,7 @@ export default function Contato() {
             className="font-semibold tracking-tight leading-[0.92] text-white"
             style={{ fontSize: 'clamp(3rem, 8vw, 7rem)' }}
           >
-            Construa o<br />futuro da saúde<br />comigo.
+            Construa o<br />futuro da saúde.
           </h2>
           <p className="text-[15px] text-zinc-400 leading-relaxed max-w-md">
             Projetos em IA na saúde, palestras ou colaborações institucionais.
