@@ -9,14 +9,14 @@ const projetos = [
     name: 'Prevvine',
     tagline: 'IA regulada para saúde',
     desc: 'Única healthtech de inteligência artificial selecionada para o Sandbox Regulatório em IA da ANPD. Tratamento de dados clínicos com IA segura e em conformidade regulatória.',
-    url: 'https://prevvine.com.br',
+    url: 'https://prevvine.dev/',
   },
   {
     num: '02',
     name: 'StaiDoc',
     tagline: 'Diagnósticos por evidência',
     desc: 'Plataforma de suporte diagnóstico baseada em evidências médicas, aplicando inteligência artificial para aprimorar a tomada de decisão clínica.',
-    url: '#',
+    url: 'https://staidoc.com/',
   },
   {
     num: '03',
