@@ -1,7 +1,11 @@
 'use client'
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useRef, useEffect } from 'react'
+import {
+  motion, AnimatePresence,
+  useScroll, useTransform, useSpring,
+  useMotionValue, useInView, animate,
+} from 'framer-motion'
 import { ArrowUpRight, X } from 'lucide-react'
 import DnaCanvas from './DnaCanvas'
 import { NeonButton } from './ui/neon-button'
@@ -33,8 +37,92 @@ const fadeUp = {
   }),
 }
 
+// Counter animation for numeric stats
+function AnimatedStat({ value, label, index }: { value: string; label: string; index: number }) {
+  const ref = useRef<HTMLDivElement>(null)
+  const isInView = useInView(ref, { once: true })
+  const motionVal = useMotionValue(0)
+  const [display, setDisplay] = useState(value)
+
+  // Only animate if value starts with a digit or '+'
+  const isNumeric = /^[+#]?\d/.test(value)
+
+  useEffect(() => {
+    if (!isInView || !isNumeric) return
+    const numericPart = parseInt(value.replace(/\D/g, ''), 10)
+    const prefix = value.replace(/\d.*/, '')
+    const unsubscribe = motionVal.on('change', (v) => {
+      setDisplay(`${prefix}${Math.round(v)}`)
+    })
+    const controls = animate(motionVal, numericPart, {
+      duration: 1.4,
+      delay: index * 0.15,
+      ease: 'easeOut',
+    })
+    return () => {
+      controls.stop()
+      unsubscribe()
+    }
+  }, [isInView, isNumeric, motionVal, value, index])
+
+  return (
+    <motion.div
+      ref={ref}
+      className="flex flex-col items-end"
+      variants={fadeUp}
+      initial="hidden"
+      animate="visible"
+      custom={index}
+    >
+      <span className="font-semibold text-white leading-none" style={{ fontSize: 'clamp(1.4rem, 4.5vw, 3rem)' }}>
+        {isNumeric && isInView ? display : value}
+      </span>
+      <span className="text-[10px] sm:text-xs md:text-sm font-semibold tracking-widest uppercase text-gray-400 whitespace-pre-line leading-tight text-right mt-1">
+        {label}
+      </span>
+    </motion.div>
+  )
+}
+
+// Magnetic button wrapper
+function MagneticWrapper({ children, strength = 0.4 }: { children: React.ReactNode; strength?: number }) {
+  const ref = useRef<HTMLDivElement>(null)
+  const x = useMotionValue(0)
+  const y = useMotionValue(0)
+  const springX = useSpring(x, { stiffness: 150, damping: 15, mass: 0.1 })
+  const springY = useSpring(y, { stiffness: 150, damping: 15, mass: 0.1 })
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = ref.current?.getBoundingClientRect()
+    if (!rect) return
+    x.set((e.clientX - rect.left - rect.width / 2) * strength)
+    y.set((e.clientY - rect.top - rect.height / 2) * strength)
+  }
+
+  const handleMouseLeave = () => {
+    x.set(0)
+    y.set(0)
+  }
+
+  return (
+    <motion.div
+      ref={ref}
+      style={{ x: springX, y: springY }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      {children}
+    </motion.div>
+  )
+}
+
 export default function Hero() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const heroRef = useRef<HTMLElement>(null)
+
+  // Parallax DNA
+  const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] })
+  const dnaY = useTransform(scrollYProgress, [0, 1], [0, -120])
 
   const scrollTo = (id: string) => {
     setMenuOpen(false)
@@ -42,13 +130,13 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden bg-black">
-      {/* DNA Background */}
-      <div className="absolute inset-0 z-0">
+    <section ref={heroRef} className="relative min-h-screen flex flex-col overflow-hidden bg-black">
+      {/* DNA Background — parallax */}
+      <motion.div className="absolute inset-0 z-0" style={{ y: dnaY }}>
         <DnaCanvas />
-      </div>
+      </motion.div>
 
-      {/* Overlay escurecedor suave */}
+      {/* Overlay */}
       <div className="absolute inset-0 z-[1] bg-black/40" />
 
       {/* Conteúdo */}
@@ -67,13 +155,7 @@ export default function Hero() {
 
           <div className="hidden md:flex items-center gap-3">
             {NAV_LINKS.map((link, i) => (
-              <motion.div
-                key={link}
-                variants={fadeDown}
-                initial="hidden"
-                animate="visible"
-                custom={i + 1}
-              >
+              <motion.div key={link} variants={fadeDown} initial="hidden" animate="visible" custom={i + 1}>
                 <NeonButton
                   onClick={() => scrollTo(sectionIds[link])}
                   variant="ghost"
@@ -102,7 +184,7 @@ export default function Hero() {
           </motion.button>
         </nav>
 
-        {/* MOBILE MENU OVERLAY */}
+        {/* MOBILE MENU */}
         <AnimatePresence>
           {menuOpen && (
             <motion.div
@@ -122,7 +204,6 @@ export default function Hero() {
                   <X size={16} className="text-white" />
                 </button>
               </div>
-
               <div className="flex flex-col gap-8 mt-16">
                 {NAV_LINKS.map((link) => (
                   <button
@@ -134,7 +215,6 @@ export default function Hero() {
                   </button>
                 ))}
               </div>
-
               <div className="mt-auto">
                 <button
                   onClick={() => scrollTo('sobre-mim')}
@@ -147,7 +227,7 @@ export default function Hero() {
           )}
         </AnimatePresence>
 
-        {/* STATS ROW */}
+        {/* STATS ROW — counter animation */}
         <div className="flex-1 flex items-center justify-end px-5 sm:px-8 md:px-12 py-8 md:py-0">
           <div className="flex gap-5 sm:gap-8 md:gap-10">
             {[
@@ -155,33 +235,14 @@ export default function Hero() {
               { num: '#1', label: 'HEALTHTECH\nIA ANPD', index: 3 },
               { num: 'SBCP', label: 'COMISSÃO\nIA & TECH', index: 4 },
             ].map(({ num, label, index }) => (
-              <motion.div
-                key={num}
-                className="flex flex-col items-end"
-                variants={fadeUp}
-                initial="hidden"
-                animate="visible"
-                custom={index}
-              >
-                <span
-                  className="font-semibold text-white leading-none"
-                  style={{ fontSize: 'clamp(1.4rem, 4.5vw, 3rem)' }}
-                >
-                  {num}
-                </span>
-                <span
-                  className="text-[10px] sm:text-xs md:text-sm font-semibold tracking-widest uppercase text-gray-400 whitespace-pre-line leading-tight text-right mt-1"
-                >
-                  {label}
-                </span>
-              </motion.div>
+              <AnimatedStat key={num} value={num} label={label} index={index} />
             ))}
           </div>
         </div>
 
         {/* BOTTOM CONTENT */}
         <div className="px-5 sm:px-8 md:px-12 pb-8 md:pb-12 flex flex-col gap-6 md:gap-10">
-          {/* Row A: tagline + CTA */}
+          {/* Row A: tagline + CTA magnético */}
           <div className="flex items-center justify-between gap-4">
             <motion.p
               className="text-[10px] sm:text-xs md:text-sm font-semibold tracking-widest uppercase text-white/80 max-w-[130px] sm:max-w-[160px] md:max-w-xs leading-tight"
@@ -195,21 +256,18 @@ export default function Hero() {
               Tecnologia
             </motion.p>
 
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              animate="visible"
-              custom={6}
-            >
-              <NeonButton
-                onClick={() => scrollTo('sobre-mim')}
-                variant="default"
-                size="lg"
-                className="flex items-center gap-2 text-white font-semibold tracking-widest uppercase whitespace-nowrap text-base sm:text-xl md:text-2xl"
-              >
-                Saiba Mais
-                <ArrowUpRight size={18} className="sm:w-[22px] sm:h-[22px]" />
-              </NeonButton>
+            <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={6}>
+              <MagneticWrapper strength={0.4}>
+                <NeonButton
+                  onClick={() => scrollTo('sobre-mim')}
+                  variant="default"
+                  size="lg"
+                  className="flex items-center gap-2 text-white font-semibold tracking-widest uppercase whitespace-nowrap text-base sm:text-xl md:text-2xl"
+                >
+                  Saiba Mais
+                  <ArrowUpRight size={18} className="sm:w-[22px] sm:h-[22px]" />
+                </NeonButton>
+              </MagneticWrapper>
             </motion.div>
           </div>
 
@@ -229,23 +287,15 @@ export default function Hero() {
               </p>
             </motion.div>
 
-            {/* Heading clip reveal */}
             <div className="flex flex-col items-end">
               {['TECNOLOGIA.', 'MEDICINA.', 'INOVAÇÃO.'].map((word, i) => (
                 <div key={word} className="overflow-hidden">
                   <motion.span
                     className="block font-semibold text-white uppercase text-right"
-                    style={{
-                      fontSize: 'clamp(2rem, 9vw, 9rem)',
-                      lineHeight: 0.88,
-                    }}
+                    style={{ fontSize: 'clamp(2rem, 9vw, 9rem)', lineHeight: 0.88 }}
                     initial={{ y: '110%' }}
                     animate={{ y: 0 }}
-                    transition={{
-                      delay: 0.4 + i * 0.14,
-                      duration: 0.7,
-                      ease: [0.22, 1, 0.36, 1],
-                    }}
+                    transition={{ delay: 0.4 + i * 0.14, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
                   >
                     {word}
                   </motion.span>
